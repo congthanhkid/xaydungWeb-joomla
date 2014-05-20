@@ -1,0 +1,169 @@
+.menusys_css {
+	float: left;
+}
+#menusys_css {
+	margin: 0;
+	padding: 0;
+	float: left;
+	height: 35px;
+}
+#menusys_css ul {
+	margin: 0; 
+	padding: 0;
+}
+#menusys_css li {
+	margin: 0 5px 0 0; 
+	padding: 0;
+	float: left;
+	display: block;
+	background: none;
+	cursor: pointer;
+}
+#menusys_css li ul {
+	width: 16.9em;
+	position: absolute;
+	z-index: 99;
+	left: -999em; 
+	height: auto;
+}
+#menusys_css li ul ul {
+	margin: -1.8em 0 0 15.5em;
+}
+#menusys_css li li {
+	padding: 0;
+	line-height: 24px;
+	margin: 0;
+	width: 16.9em;
+}
+#menusys_css ul a {
+}
+#menusys_css li:hover ul ul, #menusys_css li:hover ul ul ul,
+#menusys_css li.hover ul ul, #menusys_css li.havechildhover ul ul, #menusys_css li.havechild-activehover ul ul, #menusys_css li.activehover ul ul,
+#menusys_css li.hover ul ul ul, #menusys_css li.havechildhover ul ul ul, #menusys_css li.havechild-activehover ul ul ul, #menusys_css li.activehover ul ul ul {
+	left: -999em;
+}
+#menusys_css li:hover ul, #menusys_css li li:hover ul, #menusys_css li li li:hover ul,
+#menusys_css li.hover ul, #menusys_css li.havechildhover ul, #menusys_css li.havechild-activehover ul, #menusys_css li.activehover ul,
+#menusys_css li li.hover ul, #menusys_css li li.havesubchildhover ul, #menusys_css li li.havesubchild-activehover ul, #menusys_css li li.activehover ul,
+#menusys_css li li li.hover ul, #menusys_css li li li.havesubchildhover ul, #menusys_css li li li.havesubchild-activehover ul, #menusys_css li li li.activehover ul {
+	left: auto;
+}
+/* Menu styling begin */
+
+#menusys_css li a {
+	padding: 0 0 0 10px;
+	display: block;
+	text-decoration: none;
+	line-height: 35px;
+	
+	background: url(../../images/mainmenu-l.png) no-repeat left center;
+}
+#menusys_css li a span {
+	padding: 0 10px 0px 0;
+	border: none;
+	font-size:11px;
+	display: block;
+	line-height: 35px;
+	color: #d4d4d4;
+	text-transform: uppercase;
+	background: url(../../images/mainmenu-r.png) no-repeat right center;
+}
+#menusys_css li a:hover,
+#menusys_css li a:active,
+#menusys_css li a:focus {
+	background: url(../../images/mainmenu-l.png) no-repeat left center;
+	color: #fff;
+}
+#menusys_css li:hover a,
+#menusys_css li.hover a,
+#menusys_css li.havechildhover a,
+#menusys_css li.havechild-activehover a {
+	background: url(../../images/mainmenu-l.png) no-repeat left center;
+}
+#menusys_css li:hover a span,
+#menusys_css li.hover a span,
+#menusys_css li.havechildhover a span,
+#menusys_css li.havechild-activehover a span {
+	background: url(../../images/mainmenu-r.png) no-repeat right center;
+	color: #4CD395;
+}
+#menusys_css li a.active,
+#menusys_css li a.active:hover,
+#menusys_css li a.active:active,
+#menusys_css li a.active:focus {
+	background: url(../../images/mainmenu-l.png) no-repeat left center;
+	color: #4CD395;
+}
+#menusys_css li a.active span,
+#menusys_css li a.active:hover span,
+#menusys_css li a.active:active span,
+#menusys_css li a.active:focus span {
+	background: url(../../images/mainmenu-r.png) no-repeat right center;
+	color: #4cd395;
+}
+#menusys_css li ul {
+	background: #525252;
+	border-top: solid 1px #373737;
+	border-left: solid 1px #373737;
+	border-right: solid 1px #373737;
+}
+#menusys_css li ul li {
+	border-bottom: solid 1px #373737;
+	background: #303030 url(../../images/bt-menuright.png) repeat-x top;
+}
+#menusys_css li ul li.hasChild {
+	border-right: none;
+}
+#menusys_moo li ul li li {
+}
+#menusys_css li ul a,
+#menusys_css li ul a:hover,
+#menusys_css li ul a:active {
+	margin: 0;
+	padding: 6px 0;
+	line-height: normal;
+	height: auto;
+	background: none !important;
+	border: none !important;
+	text-shadow: none;
+}
+#menusys_css li ul a span {
+	padding: 0 0 0 10px;
+	font-weight: normal;
+	line-height: 15px;
+	color: #FFF !important;
+	background: none !important;
+	text-transform: none;
+}
+#menusys_css li.havesubchild,
+#menusys_css li.havesubchild-active {
+
+}
+#menusys_css li ul a:hover,
+#menusys_css li ul a:active,
+#menusys_css li ul a:focus,
+#menusys_css ul li:hover,
+#menusys_css ul li.hover,
+#menusys_css ul li.havesubchildhover,
+#menusys_css ul li.havesubchild-activehover,
+#menusys_css ul ul li:hover,
+#menusys_css ul ul li.hover,
+#menusys_css ul ul li.havesubchildhover,
+#menusys_css ul ul li.havesubchild-activehover {
+	background: #222;
+}
+#menusys_css li ul a:hover span,
+#menusys_css li ul a:active span,
+#menusys_css li ul a:focus span,
+#menusys_css li ul a.active span,
+#menusys_css li ul a.active:hover span,
+#menusys_css li ul a.active:active span,
+#menusys_css li ul a.active:focus span {
+	color: #51E8A3 !important;
+}
+#menusys_css ul li a.active {
+}
+#menusys_css ul li a.active:hover,
+#menusys_css ul li a.active:active,
+#menusys_css ul li a.active:focus {
+}

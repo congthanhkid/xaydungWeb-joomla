@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="module" version="1.5.0">
+    <name>Yt Mega K2 News</name>
+    <creationDate>December 2010</creationDate>
+    <author>YouTech Company</author>
+    <copyright>(C) 2010 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>contact@ytcvn.com</authorEmail>
+    <authorUrl>http://joomla.ytcvn.com</authorUrl>
+    <version>1.0</version>
+    <description>YT_MEGA_K2_NEWS_MODULE_DESC</description>
+    <files>
+         <filename module="mod_yt_megak2news">mod_yt_megak2news.php</filename>
+         <filename module="mod_yt_megak2news">mod_yt_megak2news.xml</filename>
+         <filename module="mod_yt_megak2news">helper.php</filename>         
+         <folder module="mod_yt_megak2news">assets</folder>
+         <folder module="mod_yt_megak2news">tmpl</folder>
+         <folder module="mod_yt_megak2news">elements</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yt_megak2news.ini</language>
+	</languages>	   
+   <params addpath="/modules/mod_yt_megak2news/elements">   		
+		
+   		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="numcols" type="text" default="2" label="Total colums of category" description="The total colums of category which you want to show in the module" />
+        <param name="category" type="k2category" default="0" label="Select Categories" description="Please select categories, one category is one tab" />
+    <!--    <param name="articles" type="k2articles" default="0" label="Select Items" description="Please select items in categories which you selected in Select Categories box to limit display items" /> -->
+	    <param name="featured" type="list" default="1" label="For Featured Items" description="For Featured Items.">
+          <option value="0">Hide featured items</option>
+          <option value="1">Show featured items</option>
+          <option value="2">Only featured items</option>
+        </param>
+		
+        <param name="sort_order_field" type="list" default="c_dsc" label="Sort order by" description="Ordering options">
+            <option value="c_dsc">Recently Added First</option>
+            <option value="m_dsc">Recently Modified First</option>
+            <option value="h_dsc">Most Popular</option>
+            <option value="h_asc">Least Popular</option>
+            <option value="o_asc">Default ordering</option>    
+            <option value="random">Random</option>    
+            <option value="title">Title</option>                                                                                                              
+          </param>
+					
+		<param name="limit_items" type="text" default="6" label="Total articles" description="Amount of items you want to show in the module" />		
+		<param name="num_items" type="text" default="2" label="The amount of articles (For Theme3)" description="The amount of articles which you want to show in the category" />               
+		<param name="count_character" type="radio" default="1" label="Description" description="">
+              <option value="1">Count characters</option>
+              <option value="0">Use entire description text</option>
+       
+        </param>       
+        <param name="Description_max" type="text" default="200" label="Description max" description="Description max" />                                                                         
+        <param name="show_description" type="radio" default="1" label="Show description" description="">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+        </param>
+		<param name="show_title" type="radio" default="1" label="Show Title" description="">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+        </param>
+		<param name="limit_title" type="text" default="25" label="Max Length of Title" description="Max length of title" />      
+        <param name="target" type="radio" default="_self" label="Open Link" description="The Type shows when you click on the link">
+            <option value="_blank">New Window</option>
+            <option value="_self">Same Window</option>                    
+        </param>
+	    <param name="show_price" type="list" default="0" label="Show Price (K2Mart Only)" description="Show Price (K2Mart Only)">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param> 
+		<param name="price_color" type="text" default="#8B0000" label="Color of price" description="Please enter a price color. Example: #8B0000" />      
+		              
+        <param name="show_image" type="radio" default="1" label="Show Image" description="Show Image"> 
+            <option value="1">Yes</option>
+            <option value="0">No</option>    
+        </param>  
+        <param name="link_image" type="radio" default="1" label="Image link" description="">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+        </param>           			
+		<param name="thumb_width" type="text" default="200" label="Thumbnail Width" description="The width of thumbnail image. The module will auto resize your image to your width" />
+		<param name="thumb_height" type="text" default="200" label="Thumbnail Height" description="The height of thumbnail image. The module will auto resize your image to your height" />
+		
+	    <param name="thumbnail_mode" type="list" default="1" label="Thumbnail Mode" description="Thumbnail Mode">
+            <option value="0">Image Source</option>
+            <option value="1">Resized</option>
+			<option value="2">Cropped</option>
+        </param>
+        <param name="theme" type="list" default="theme1" label="Select theme" description="Select theme you want">
+            <option value="theme1">theme1</option>
+            <option value="theme2">theme2</option>
+            <option value="theme3">theme3</option>   
+        </param>
+				
+		<param name="show_read_more_link" type="radio" default="1" label="Show read more link" description="show_read_more_link"> 
+            <option value="1">Yes</option>
+            <option value="0">No</option>    
+        </param>  
+        <param name="read_more_text" type="text" default="read more..." label="Read more text" description="Select read more text"/>                                        
+     	 <param name="show_all_items" type="radio" default="1" label="Show all items" description="Show all items"> 
+            <option value="1">Yes</option>
+            <option value="0">No</option>    
+        </param> 
+		<param name="view_all_text" type="text" default="view all" label="View all items text" description="Select option of viewing all items"/>                                        
+     	<param name="customUrl" type="textarea" default="" label="Custom URL" description="Custom URL" cols="40" rows="4" />   
+		<param name="Intro_text" type="textarea" default="" label="Intro text" description="Intro text of module" cols="40" rows="4" />                              
+		<param name="Footer_text" type="textarea" default="" label="Footer text" description="Footer text of module" cols="40" rows="4" />   
+        </params>
+       
+       
+   
+     <params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Caching">
+			<option value="1">Use Cache</option>
+			<option value="0">Do not use Cache</option>
+		</param>
+		<param name="cache_time" type="text" default="300" label="Cache time" description="Cache time" />
+		</params>
+</install>
+

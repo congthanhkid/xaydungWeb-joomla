@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>jsecure</name>
+	<author>Ajay Lulia</author>
+	<authorEmail>ajay.lulia@joomlaserviceprovider.com</authorEmail>
+	<creationDate>2008-08-28</creationDate>
+	<copyright>This component is released under the GNU/GPL License</copyright>
+	<authorUrl>www.joomlaserviceprovider.com</authorUrl>
+	<version>2.1.8</version>
+	<description>jSecure Authentication has been successfully installed.</description>
+	
+  	<installfile>install.jsecure.php</installfile>
+	<uninstallfile>uninstall.jsecure.php</uninstallfile>
+  	<install>
+	<queries>
+		<query table="#__jsecurelog">
+			CREATE TABLE IF NOT EXISTS `#__jsecurelog` (
+			`id` int(11) NOT NULL auto_increment,
+			`date` datetime NOT NULL,
+			`ip` varchar(16) NOT NULL,
+			`userid` int(11) NOT NULL default '0',
+			`code` varchar(255) NOT NULL,
+			`change_variable` text NOT NULL,
+			PRIMARY KEY  (`id`)
+			) TYPE=MyISAM;
+		</query>
+	</queries>
+	</install>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>jsecure.php</filename>
+	</files>
+	<administration>
+		<menu img="components/com_jsecure/images/jSecure_icon_16x16.png">jSecure Authentication</menu>
+		<submenu>
+		  <menu task="basic">Basic Configuration</menu>
+		  <menu task="advanced">Advanced Configuration</menu>
+		  <menu task="log">View Log</menu>
+		  <menu task="help">Help</menu>
+		</submenu>
+		<files folder="admin">
+			<folder>css</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>views</folder>
+			<folder>models</folder>
+			<folder>language</folder>
+			<folder>sysplugin</folder>
+
+			<filename>install.jsecure.php</filename>
+			<filename>common.php</filename>
+			<filename>uninstall.jsecure.php</filename>
+			<filename>admin.jsecure.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>			
+			<filename>params.php</filename>
+			<filename>toolbar.jsecure.html.php</filename>
+			<filename>toolbar.jsecure.php</filename>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_jsecure.ini</language>
+		</languages>
+
+	</administration>
+	
+	<params />
+</install>
+		

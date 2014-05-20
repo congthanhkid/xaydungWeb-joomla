@@ -1,0 +1,25 @@
+Name: JV Accordion Menu
+Author: JoomlaVision
+creationDate: April 2010
+Copyright (c) 2008 - 2009 JoomlaVision. All rights reserved.
+AuthorURL: http://www.joomlavision.com/
+Description: JV Accordion Menu module by JoomlaVision
+---------------------------------------------------------
+CHANGE LOG:
+
+Legend:
+
+# -> Bug Fix
+$ -> Language fix or change
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+------------ 1.5.2 Release [10-Jun-2010] ------------
+10-Jun-2010 Chiennd
+# Fix bug follow item by current menu
+------------ 1.5.3 Release [17-Jun-2010] ------------
+17-Jun-2010 Chiennd
+# Bug fixes: conflict search component or when URL doesn't contain Itemid 
+

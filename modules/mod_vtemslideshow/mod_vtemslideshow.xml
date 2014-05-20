@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" position="status" method="upgrade">
+	<name>VTEM Slideshow</name>
+	<author>Nguyen Van Tuyen</author>
+	<creationDate>01/06/2010</creationDate>
+	<copyright>(C) 2010 Vtem.net - All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>tuyen0110@gmail.com</authorEmail>
+	<authorUrl>www.vtem.net</authorUrl>
+	<version>1.5.2</version>
+	<description>This is slideshow module for joomla.</description>
+	<files>
+		<filename module="mod_vtemslideshow">mod_vtemslideshow.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+		<folder>images/</folder>
+		<folder>js/</folder>
+	</files>
+	<params>
+	  <param name="slideID" type="text" default="slideshow1" label="Module unique ID" description="Unique ID for module (must be unique if you have two or more modules on one page) (i.e. slideshow1)"/>
+	  <param name="width" type="text" default="500" label="Width" description="Width of Slideshow in px" />
+	  <param name="height" type="text" default="300" label="Height" description="Height of Slideshow in px" />
+	  <param name="border" type="text" default="1px solid #F5F5F5" label="Border" description="Border of Slideshow" />
+	  <param name="imagePath" type="text" default="images/stories/fruit" label="Images Directory" description="Location of images to be used in the rotation" size="35" />
+	  <param name="sortCriteria" type="list" default="0" label="Sort Criteria" description="The sort criteria of the images files">
+			<option value="0">Alphabetical</option>
+			<option value="1">Creation Date</option>
+	  </param>
+	  <param name="sortOrder" type="list" default="0" label="Sort Order" description="The sort order of the images files">
+			<option value="0">Ascending</option>
+			<option value="1">Descending</option>
+			<option value="2">Random</option>
+	  </param>
+	  <param name="sortOrderManual" type="text" default="" label="Manual Sort Order" description="Comma seperated list of images that describe the order - Example: image3.jpg,image2.jpg,image1.jpg - this will override Sort Criteria if set" />
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param name="strips" type="text" default="10" label="Strips" description="Number of strips" />
+	  <param name="delay" type="text" default="5000" label="Delay" description="Delay between images in ms" />
+	  <param name="stripDelay" type="text" default="50" label="Strip delay" description="Delay beetwen strips in ms" />
+	  <param name="position" type="list" default="bottom" label="Position" description="Position of strips">
+			<option value="top">Top</option>
+			<option value="bottom">Bottom</option>
+			<option value="alternate">Alternate</option>
+			<option value="curtain">Curtain</option>
+	  </param>
+	  <param name="direction" type="list" default="fountainAlternate" label="Direction" description="Direction of strips">
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+			<option value="alternate">Alternate</option>
+			<option value="random">Random</option>
+			<option value="fountain">Fountain</option>
+			<option value="fountainAlternate">FountainAlternate</option>
+	  </param>
+	  <param name="effect" type="list" default="" label="Effect" description="Effect of strips">
+		    <option value="">Default</option>
+			<option value="curtain">Curtain</option>
+			<option value="zipper">Zipper</option>
+			<option value="wave">Wave</option>
+	  </param>
+	  <param name="navigation" type="radio" default="1" label="Show Navigation" description="Shows Navigation of the slideshow">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </param>
+	  <param name="nav_style" type="list" default="style4" label="Navigation style" description="Style of navigation">
+			<option value="style1">Style1</option>
+			<option value="style2">Style2</option>
+			<option value="style3">style3</option>
+			<option value="style4">style4</option>
+			<option value="style5">style5</option>
+	  </param>
+	  <param name="Hor_pos" type="list" default="left" label="Horizontal position" description="Horizontal position of navigation">
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+	  </param>
+	  <param name="Ver_pos" type="list" default="bottom" label="Vertical position" description="Vertical position of navigation">
+			<option value="top">Top</option>
+			<option value="bottom">Bottom</option>
+	  </param>
+	  <param name="active_color" type="text" default="#cc0000" label="Active color" description="Color of navigation active" />
+	  <param name="nextprev" type="radio" default="0" label="Show Next|Prev" description="Shows Next and Prev button of the slideshow">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </param>
+	  <param name="links" type="radio" default="0" label="Show link" description="Shows link on images">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </param>
+      <param name="linkimage" type="textarea" default="http://www.vtem.net; http://www.google.com; http://www.apple.com" cols="36" rows="6" label="URLs" description="Link for the images" />
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+	  <param name="jqueryslideshow" type="radio" default="1" label="Jquery load" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </param>
+	</params>
+	
+	
+	<config>
+	 <fields name="params">
+	  <fieldset name="basic">
+	  <field name="slideID" type="text" default="slideshow1" label="Module unique ID" description="Unique ID for module (must be unique if you have two or more modules on one page) (i.e. slideshow1)"/>
+	  <field name="width" type="text" default="500" label="Width" description="Width of Slideshow in px" />
+	  <field name="height" type="text" default="300" label="Height" description="Height of Slideshow in px" />
+	  <field name="border" type="text" default="1px solid #F5F5F5" label="Border" description="Border of Slideshow" />
+	  <field name="imagePath" type="text" default="images/sampledata/fruitshop" label="Images Directory" description="Location of images to be used in the rotation" size="35" />
+	  <field name="sortCriteria" type="list" default="0" label="Sort Criteria" description="The sort criteria of the images files">
+			<option value="0">Alphabetical</option>
+			<option value="1">Creation Date</option>
+	  </field>
+	  <field name="sortOrder" type="list" default="0" label="Sort Order" description="The sort order of the images files">
+			<option value="0">Ascending</option>
+			<option value="1">Descending</option>
+			<option value="2">Random</option>
+	  </field>
+	  <field name="sortOrderManual" type="text" default="" label="Manual Sort Order" description="Comma seperated list of images that describe the order - Example: image3.jpg,image2.jpg,image1.jpg - this will override Sort Criteria if set" />
+	  <field name="@spacer" type="spacer" default="" label="" description="" />
+	  <field name="strips" type="text" default="10" label="Strips" description="Number of strips" />
+	  <field name="delay" type="text" default="5000" label="Delay" description="Delay between images in ms" />
+	  <field name="stripDelay" type="text" default="50" label="Strip delay" description="Delay beetwen strips in ms" />
+	  <field name="position" type="list" default="bottom" label="Position" description="Position of strips">
+			<option value="top">Top</option>
+			<option value="bottom">Bottom</option>
+			<option value="alternate">Alternate</option>
+			<option value="curtain">Curtain</option>
+	  </field>
+	  <field name="direction" type="list" default="fountainAlternate" label="Direction" description="Direction of strips">
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+			<option value="alternate">Alternate</option>
+			<option value="random">Random</option>
+			<option value="fountain">Fountain</option>
+			<option value="fountainAlternate">FountainAlternate</option>
+	  </field>
+	  <field name="effect" type="list" default="" label="Effect" description="Effect of strips">
+		    <option value="">Default</option>
+			<option value="curtain">Curtain</option>
+			<option value="zipper">Zipper</option>
+			<option value="wave">Wave</option>
+	  </field>
+	  <field name="navigation" type="radio" default="1" label="Show Navigation" description="Shows Navigation of the slideshow">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </field>
+	  <field name="nav_style" type="list" default="style4" label="Navigation style" description="Style of navigation">
+			<option value="style1">Style1</option>
+			<option value="style2">Style2</option>
+			<option value="style3">style3</option>
+			<option value="style4">style4</option>
+			<option value="style5">style5</option>
+	  </field>
+	  <field name="Hor_pos" type="list" default="left" label="Horizontal position" description="Horizontal position of navigation">
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+	  </field>
+	  <field name="Ver_pos" type="list" default="bottom" label="Vertical position" description="Vertical position of navigation">
+			<option value="top">Top</option>
+			<option value="bottom">Bottom</option>
+	  </field>
+	  <field name="active_color" type="text" default="#cc0000" label="Active color" description="Color of navigation active" />
+	  <field name="nextprev" type="radio" default="0" label="Show Next|Prev" description="Shows Next and Prev button of the slideshow">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </field>
+	  <field name="links" type="radio" default="0" label="Show link" description="Shows link on images">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </field>
+      <field name="linkimage" type="textarea" default="http://www.vtem.net; http://www.google.com; http://www.apple.com" cols="36" rows="6" label="URLs" description="Link for the images" />
+	  <field name="@spacer" type="spacer" default="" label="" description="" />
+	  <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+	  <field name="jqueryslideshow" type="radio" default="1" label="Jquery load" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  </field>
+	 </fieldset>
+	</fields>
+   </config>
+</install>

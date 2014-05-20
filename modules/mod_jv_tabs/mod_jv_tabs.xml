@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install method="upgrade" type="module" version="1.5">
+	<name>JV Tabs</name>
+	<author>JoomlaVision</author>
+	<creationDate>July 13, 2010</creationDate>
+	<copyright>Copyright (C) 2008 http://www.JoomlaVision.com. All rights reserved.</copyright>
+	<license>JoomlaVision</license>
+	<authorEmail>webmaster@joomlavision.com</authorEmail>
+	<authorUrl>www.joomlavision.com</authorUrl>
+	<version>1.5.3</version>
+	<description><![CDATA[ An Ultimate Tabs module from <a href="http://www.joomlavision.com"><b>JoomlaVision.com</b></a>.<br />For further support, please visit <a href="http://forums.joomlavision.com"><b>Our Forums</b></a> and post your questions.<br />Thank you very much for choosing our services.<br /><br />JoomlaVision Team. ]]></description>
+	<files>
+		<filename module="mod_jv_tabs">mod_jv_tabs.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>thumbnail.inc.php</filename>
+		<filename>changelog.txt</filename>
+		<folder>assets/</folder>
+		<folder>elements/</folder>
+		<folder>tmpl/</folder>
+	</files>
+	<params addpath="/modules/mod_jv_tabs/elements">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="type" type="jvtype" default="moduleID" label="Type tabs:" description="Do you want to use the content code to display with tab">
+			<option value="">- Select type -</option>
+			<option value="moduleID">Modules</option>
+			<option value="categoryID">Contents</option>
+			<option value="k2_content">K2 Contents</option>
+		</param>
+		<param name="moduleID-position" type="jvposition" default="left" label="Select a position" description="Select module position which will display in tabs" />
+		<param name="moduleID-list" type="jvmodulelist" default="" label="Select Module" description="Select modules which will display in tabs" />			
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="categoryID-maxItem" type="text" default="5" label="Max number item" description="The number of items to display in tabs(default 5)" />
+		<param name="categoryID-leading_count" type="text" default="1" label="Leading Count" description="The number of leading item to display (display title, image and subject, default 1)" />		
+	  	<param name="category_ordering" type="list" default="1" label="Category Ordering" description="Category ordering">
+		  	<option value="1">Title Alphabetical</option>
+	      	<option value="2">Title Reverse - Alphabetical </option>
+	      	<option value="3">Order Descending</option>
+			<option value="4">Order Ascending</option>
+	  	</param>
+	  	<param name="categoryID-ordering" type="list" default="default" label="Items Ordering" description="Ordering options">
+			<option value="default">Default</option>
+			<option value="c_dsc">Recently Added First</option>
+			<option value="m_dsc">Recently Modified First</option>
+	  	</param>	  
+	  	<param name="categoryID-view" type="list" default="word_count" label="View:" description="View article">			
+			<option value="word_count">Word Count</option>
+			<option value="introtext">Introtext</option>
+			<option value="fulltext">Fulltext</option>
+		</param>
+		<param name="intro_length" type="text" default="300" label="Introtext length" description="Introtext length" />	  
+		<param name="categoryID-readmore" type="radio" default="0" label="Show Read More Link" description="Show Read More Link (Only active if you specified only one Category ID)">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</param>
+		<param name="categoryID-readmoreText" type="text" default="Read more..." label="Readmore hyperlink text" description="" />
+	  	<param name="categoryID-list" type="jvcategory" default="" label="Select Category" description="Select category which will display in tabs" />
+	  	<param name="k2_category" type="k2category" label="K2 Category" description="">
+		</param> 
+	</params>
+	<params group="advanced">		
+		<param name="jv_tabs_style" default="jv_default" type="list" label="Style" description="Select jv tab style">
+			<option value="jv_default">JV Default</option>
+			<option value="jv_news2">JV News2</option>
+			<option value="jv_news">JV News</option>
+			<option value="jv_pedon">JV Pedon</option>
+			<option value="jv_lago">JV Lago</option>
+			<option value="jv_lago2">JV Lago2</option>
+			<option value="jv_left_vertical">JV Left Vertical</option>			
+		</param>
+		<param name="effect_type" default="scroll_tb" type="list" label="Select Effect" description="Select Effect">
+			<option value="scroll_tb">Scroll Top/Bottom</option>
+			<option value="scroll_lr">Scroll Left/Right</option>
+			<option value="jv_news2">Show/hide</option>
+			<option value="fade">Fade</option>
+		</param>	
+		<param name="Height" type="text" default="auto" label="Height:" description="Enter the Height of tab module. Exp: 400" />
+		<param name="Width" type="text" default="100%" label="Width:" description="Enter the Width of tab module. Exp: 500" />
+		<param name="tHeight" type="text" default="" label="Tabs title Height:" description="Enter the Tabs title Height of tab module" />
+		<param name="tWidth" type="text" default="" label="Tabs title Width:" description="Enter the Tabs title Width of tab module" />		
+		<param name="thumb_display" type="radio" default="display" label="Image thumb display" description="Image thumb display">
+			<option value="display">Display</option>
+			<option value="hide">Hide</option>
+		</param>		
+		<param name="thumb_width" type="text" label="Thumbnail Width" default="70" description="" />
+		<param name="thumb_height" type="text" label="Thumbnail Height" default="50" description="" />		
+		<param name="mouseType" type="radio" default="click" label="Event type :" description="Chose event type?">
+			<option value="click">Click</option>
+			<option value="mouseenter">Mouseover</option>
+		</param>
+		<param name="duration" type="text" default="1000" label="Duration:" description="Enter the duration of tab module" />
+	</params>
+</install>

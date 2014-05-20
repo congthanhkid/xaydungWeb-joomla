@@ -1,0 +1,42 @@
+ul#pagination{
+    display: block;
+    margin: 10px;
+    padding: 0 5%;
+    height: 20px;
+}
+
+ul#pagination li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul#pagination li a, ul#pagination li span{
+    background: #fff;
+    display: block;
+    float: left;
+    line-height: 20px;
+    padding: 0 1em;
+    margin: 0;
+    /*border: 1px solid silver;*/
+}
+ul#pagination li span{
+    color: #ccc;
+    cursor: default;
+}
+
+ul#pagination li span.selected{
+    color: #000;
+    font-weight: bold;
+    background: #eee;
+}
+
+ul#pagination li a:hover {
+    background: #eee;
+    text-decoration: none;
+}
+
+div.actions {
+    margin: 10px;
+    padding: 0;
+}

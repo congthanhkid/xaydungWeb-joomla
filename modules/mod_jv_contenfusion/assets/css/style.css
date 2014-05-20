@@ -1,0 +1,107 @@
+span.prev {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 28px;
+	height: 29px;
+	background: url(../images/arrow-left.png) no-repeat;
+	cursor: pointer;
+	font-size: 1px;
+	z-index: 999;
+}
+* html span.prev {
+	background: url(../images/arrow-left.jpg) no-repeat;
+}
+span.prev:hover,
+span.prev:focus,
+span.prev:active {
+	background: url(../images/arrow-left-active.png) no-repeat;
+}
+* html span.prev:hover,
+* html span.prev:focus,
+* html span.prev:active {
+	background: url(../images/arrow-left-active.jpg) no-repeat;
+}
+span.next {
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 28px;
+	height: 29px;
+	background: url(../images/arrow-right.png) no-repeat;
+	cursor: pointer;
+	font-size: 1px;
+	z-index: 999;
+}
+span.next {
+	background: url(../images/arrow-right.jpg) no-repeat;
+}
+span.next:hover,
+span.next:focus,
+span.next:active {
+	background: url(../images/arrow-right-active.png) no-repeat;
+}
+* html span.next:hover,
+* html span.next:focus,
+* html span.next:active {
+	background: url(../images/arrow-right-active.jpg) no-repeat;
+}
+.jvtooltip-box{
+	z-index: 10;
+}
+.jvtooltip-box .tooltip-tl{
+	background: transparent url(../images/tooltip_tl.png) no-repeat scroll 0 0;
+	position: relative;
+}
+.jvtooltip-box .tooltip-tr{
+	background: transparent url(../images/tooltip_tr.png) no-repeat scroll 100% 0;
+	padding: 0 15px;
+}
+.jvtooltip-box .tooltip-tm{
+	background: transparent url(../images/tooltip_tm.png) repeat scroll 0 0;
+	height: 15px;
+}
+.jvtooltip-box .tooltip-ml{
+	background: transparent url(../images/tooltip_ml.png) repeat-y scroll 0 0;
+}			
+.jvtooltip-box .tooltip-mr{
+	background: transparent url(../images/tooltip_mr.png) repeat-y scroll 100% 0;
+	padding: 0 15px;
+}			
+.jvtooltip-box .tooltip-mm{
+	background: #FFFFFF;
+	overflow: hidden;
+	min-height: 40px;
+	display: block;
+}
+.jvtooltip-box .tooltip-mt{
+	background: #FFFFFF none repeat scroll 0 0;		
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.jvtooltip-box .tooltip-bl{
+	background: transparent url(../images/tooltip_bl.png) no-repeat scroll 0 0;
+}			
+.jvtooltip-box .tooltip-br{
+	background: transparent url(../images/tooltip_br.png) no-repeat scroll 100% 0;
+	padding:0 15px;
+}			
+.jvtooltip-box .tooltip-bm{
+	background: transparent url(../images/tooltip_bm.png) repeat-x scroll 0 0;
+}
+.jvtooltip-box .tooltip-arrow{
+	height: 23px;
+	background: transparent url(../images/tooltip_arrow.png) no-repeat scroll 50% 0;
+}
+.jvtooltip-box .tooltip-close{
+	background: transparent url(../images/close.png) no-repeat scroll 0 0;
+	cursor: pointer;
+	height: 16px;
+	position:absolute;
+	right: 10px;
+	top: 8px;
+	width: 16px;
+}
+.jvtooltip{
+	z-index: 100;
+}

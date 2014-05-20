@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------
+ # Yt Mega K2 News - Version 1.0
+ # ------------------------------------------------------------------------
+ # Copyright (C) 2009-2010 The YouTech Company. All Rights Reserved.
+ # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ # Author: The YouTech Company
+ # Websites: http://joomla.ytcvn.com
+ -------------------------------------------------------------------------*/
+/*theme1*/
+.yt_mega_k2_news .theme1 .tabs {float: left; width: 100%; margin-left: 0px}
+.yt_mega_k2_news .theme1 .box-wrapper {float: left; margin-top: -5px}
+.yt_mega_k2_news .theme1 .col-two {float: none}
+
+/*them2*/
+.yt_mega_k2_news .theme2 .tabs {float: left; width: 100%; margin-left: 0px}
+.yt_mega_k2_news .theme2 .box-wrapper {float: left; margin-top: -5px}
+.yt_mega_k2_news .theme2 .content {float: left; width: 55%;}
+.yt_mega_k2_news .theme2 .col-three {width: 45%; margin-top: 20px}
+/*theme3*/
+.yt_mega_k2_news .theme3 .tabs {float: left; width: 100%; margin-left: 0px}
+.yt_mega_k2_news .theme3 .col-two {float: left; width: 90%}
+.yt_mega_k2_news .theme3 .box-wrapper {float: left; margin-top: -2px}
+.yt_mega_k2_news .theme3 .content {margin-right: 10px}

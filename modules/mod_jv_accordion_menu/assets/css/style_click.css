@@ -1,0 +1,38 @@
+.jv_aclickmenu_wrap ul.jv_maccordion ul{
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+.jv_aclickmenu_wrap .jv_maccordion li {
+	list-style-type:none;
+}
+.jv_aclickmenu_wrap a{	
+	color:#646464 !important;
+}
+div.jv_aclickmenu_wrap div.wrap_link a{
+	display: block;
+	float:left;	
+	height:25px;
+}
+.jv_aclickmenu_wrap li.last-child{
+  display:block;
+  height:25px;
+}
+div.clear{clear: both;}
+.jv_aclickmenu_wrap a.trigger{
+	height:25px;
+	width:25px;
+	display: block;
+	background:url(../images/down_arrow.gif) no-repeat;
+	float:right !important;	
+}
+.jv_aclickmenu_wrap a.active{	
+}
+.jv_aclickmenu_wrap a.open{
+	height:25px;
+	width:25px;
+	display: block;
+	background:url(../images/up_arrow.gif) no-repeat;
+	float:right !important;	
+}
+
+

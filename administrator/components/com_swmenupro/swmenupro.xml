@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+    <name>swMenuPro</name>
+    <version>6.4</version>
+    <creationDate>08/08/2008</creationDate>
+    <author>Sean White</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <copyright>This Component is Proprietry Software</copyright>
+    <license></license>
+    <description>Joomla 1.5 DHTML Menu Component</description>
+
+	 <installfile>install.swmenupro.php</installfile>
+    <uninstallfile>uninstall.swmenupro.php</uninstallfile>
+
+
+   
+    <install>
+       	<sql>DROP TABLE IF EXISTS `#__swmenu_config`</sql>
+			<sql>DROP TABLE IF EXISTS `#__swmenu_extended`</sql>
+            <sql>
+			CREATE TABLE `#__swmenu_config` (
+  `id` int(11) NOT NULL default '0',
+  `main_top` smallint(8) default '0',
+  `main_left` smallint(8) default '0',
+  `main_height` smallint(8) default '20',
+  `sub_border_over` varchar(30) default '0',
+  `main_width` smallint(8) default '100',
+  `sub_width` smallint(8) default '100',
+  `main_back` varchar(7) default '#4682B4',
+  `main_over` varchar(7) default '#5AA7E5',
+  `sub_back` varchar(7) default '#4682B4',
+  `sub_over` varchar(7) default '#5AA7E5',
+  `sub_border` varchar(30) default '#FFFFFF',
+  `main_font_size` smallint(8) default '0',
+  `sub_font_size` smallint(8) default '0',
+  `main_border_over` varchar(30) default '0',
+  `sub_font_color` varchar(7) default '#000000',
+  `main_border` varchar(30) default '#FFFFFF',
+  `main_font_color` varchar(7) default '#000000',
+  `sub_font_color_over` varchar(7) default '#FFFFFF',
+  `main_font_color_over` varchar(7) default '#FFFFFF',
+  `main_align` varchar(8) default 'left',
+  `sub_align` varchar(8) default 'left',
+  `sub_height` smallint(7) default '20',
+  `position` varchar(10) default 'absolute',
+  `orientation` varchar(20) default 'horizontal',
+  `font_family` varchar(50) default 'Arial',
+  `font_weight` varchar(10) default 'normal',
+  `font_weight_over` varchar(10) default 'normal',
+  `level2_sub_top` int(11) default '0',
+  `level2_sub_left` int(11) default '0',
+  `level1_sub_top` int(11) NOT NULL default '0',
+  `level1_sub_left` int(11) NOT NULL default '0',
+  `main_back_image` varchar(100) default NULL,
+  `main_back_image_over` varchar(100) default NULL,
+  `sub_back_image` varchar(100) default NULL,
+  `sub_back_image_over` varchar(100) default NULL,
+  `specialA` varchar(50) default '80',
+  `main_padding` varchar(40) default '0px 0px 0px 0px',
+  `sub_padding` varchar(40) default '0px 0px 0px 0px',
+  `specialB` varchar(100) default '50',
+  `sub_font_family` varchar(50) default 'Arial',
+  `extra` mediumtext,
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM </sql>
+            <sql>CREATE TABLE `#__swmenu_extended` (
+  `ext_id` int(11) NOT NULL auto_increment,
+  `menu_id` int(11) NOT NULL default '0',
+  `image` varchar(100) default NULL,
+  `image_over` varchar(100) default NULL,
+  `moduleID` int(11) NOT NULL default '0',
+  `show_name` int(2) NOT NULL default '1',
+  `image_align` varchar(20) NOT NULL default 'left',
+  `target_level` int(11) NOT NULL default '1',
+  `normal_css` mediumtext,
+  `over_css` mediumtext,
+  `show_item` int(11) NOT NULL default '1',
+  `extra` mediumtext,
+  PRIMARY KEY  (`ext_id`)
+) TYPE=MyISAM</sql>
+      
+    </install>
+    <uninstall>
+       
+            <sql>DROP TABLE `#__swmenu_config`</sql>
+            <sql>DROP TABLE `#__swmenu_extended`</sql>
+       
+    </uninstall>
+   
+
+
+
+
+
+    <administration>
+	  <menu >swMenuPro</menu>
+
+
+
+	  
+ <files folder="admin">
+		    <filename>admin.click.html.php</filename>
+            <filename>admin.csstab.html.php</filename>
+            <filename>admin.dynamictab.html.php</filename>
+            <filename>admin.mygosu.html.php</filename>
+			<filename>admin.clicktrans.html.php</filename>
+			<filename>admin.slideclick.html.php</filename>
+            <filename>admin.swmenupro.class.php</filename>
+            <filename>admin.swmenupro.html.php</filename>
+            <filename>admin.swmenupro.php</filename>
+            <filename>admin.tigra.html.php</filename>
+            <filename>admin.trans.html.php</filename>
+            <filename>admin.tree.html.php</filename>
+			<filename>install.swmenupro.php</filename>
+			<filename>menu_systems.php</filename>
+            <filename>preview.php</filename>
+            <filename>readme.txt</filename>
+            
+            <filename>uninstall.swmenupro.php</filename>
+
+            <filename>ImageManager/Classes/Files.php</filename>
+            <filename>ImageManager/Classes/GD.php</filename>
+            <filename>ImageManager/Classes/IM.php</filename>
+            <filename>ImageManager/Classes/ImageEditor.php</filename>
+            <filename>ImageManager/Classes/ImageManager.php</filename>
+            <filename>ImageManager/Classes/NetPBM.php</filename>
+            <filename>ImageManager/Classes/Thumbnail.php</filename>
+            <filename>ImageManager/Classes/Transform.php</filename>
+            <filename>ImageManager/Classes/package.xml</filename>
+            <filename>ImageManager/IMEStandalone.js</filename>
+            <filename>ImageManager/README.txt</filename>
+            <filename>ImageManager/assets/EditorContent.js</filename>
+            <filename>ImageManager/assets/ImageEditor.css</filename>
+            <filename>ImageManager/assets/dialog.js</filename>
+            <filename>ImageManager/assets/editor.css</filename>
+            <filename>ImageManager/assets/editor.js</filename>
+            <filename>ImageManager/assets/editorFrame.css</filename>
+            <filename>ImageManager/assets/editorFrame.js</filename>
+            <filename>ImageManager/assets/hover.htc</filename>
+            <filename>ImageManager/assets/imagelist.css</filename>
+            <filename>ImageManager/assets/images.js</filename>
+            <filename>ImageManager/assets/manager.css</filename>
+            <filename>ImageManager/assets/manager.js</filename>
+            <filename>ImageManager/assets/popup.js</filename>
+            <filename>ImageManager/assets/slider.js</filename>
+            <filename>ImageManager/assets/wz_jsgraphics.js</filename>
+            <filename>ImageManager/config.inc.php</filename>
+            <filename>ImageManager/editor.php</filename>
+            <filename>ImageManager/editorFrame.php</filename>
+            <filename>ImageManager/images.php</filename>
+            <filename>ImageManager/img/2x2.gif</filename>
+            <filename>ImageManager/img/2x2_w.gif</filename>
+            <filename>ImageManager/img/btnFolderNew.gif</filename>
+            <filename>ImageManager/img/btnFolderUp.gif</filename>
+            <filename>ImageManager/img/btn_cancel.gif</filename>
+            <filename>ImageManager/img/btn_ok.gif</filename>
+            <filename>ImageManager/img/crop.gif</filename>
+            <filename>ImageManager/img/default.gif</filename>
+            <filename>ImageManager/img/div.gif</filename>
+            <filename>ImageManager/img/dots.gif</filename>
+            <filename>ImageManager/img/edit_active.gif</filename>
+            <filename>ImageManager/img/edit_pencil.gif</filename>
+            <filename>ImageManager/img/edit_trash.gif</filename>
+            <filename>ImageManager/img/folder.gif</filename>
+            <filename>ImageManager/img/hand.gif</filename>
+            <filename>ImageManager/img/islocked2.gif</filename>
+            <filename>ImageManager/img/locked.gif</filename>
+            <filename>ImageManager/img/measure.gif</filename>
+            <filename>ImageManager/img/noimages.gif</filename>
+            <filename>ImageManager/img/rotate.gif</filename>
+            <filename>ImageManager/img/save.gif</filename>
+            <filename>ImageManager/img/scale.gif</filename>
+            <filename>ImageManager/img/spacer.gif</filename>
+            <filename>ImageManager/img/t_black.gif</filename>
+            <filename>ImageManager/img/t_white.gif</filename>
+            <filename>ImageManager/img/unlocked.gif</filename>
+            <filename>ImageManager/img/unlocked2.gif</filename>
+            <filename>ImageManager/lang/en.js</filename>
+            <filename>ImageManager/manager.php</filename>
+            <filename>ImageManager/newFolder.html</filename>
+            <filename>ImageManager/standalone.html</filename>
+            <filename>ImageManager/thumbs.php</filename>
+           
+            <filename>css/swmenupro.css</filename>
+
+            <filename>images/blank.png</filename>
+            <filename>images/blue-tab.png</filename>
+            <filename>images/border_top.png</filename>
+            <filename>images/click_dimensions.png</filename>
+            <filename>images/colors_top.png</filename>
+            <filename>images/colorwheel.jpg</filename>
+            <filename>images/csstab_border.png</filename>
+            <filename>images/csstab_colors.png</filename>
+            <filename>images/csstab_offsets.png</filename>
+            <filename>images/csstab_padding.png</filename>
+            <filename>images/font_top.png</filename>
+            <filename>images/info.png</filename>
+            <filename>images/menu_padding2.png</filename>
+            <filename>images/mygosu_border.png</filename>
+            <filename>images/mygosu_offsets.png</filename>
+			<filename>images/accordian_offsets.png</filename>
+            <filename>images/sel.gif</filename>
+            <filename>images/smallblue-tab.png</filename>
+            <filename>images/smallwhite-tab.png</filename>
+            <filename>images/swmenupro_logo_small.gif</filename>
+            <filename>images/swmenupro_footer.png</filename>
+            <filename>images/tigra_border.png</filename>
+            <filename>images/tigra_offsets.png</filename>
+            <filename>images/trans_offsets.png</filename>
+            <filename>images/tree-branch.gif</filename>
+            <filename>images/tree-doc.gif</filename>
+            <filename>images/tree-folder-open.gif</filename>
+            <filename>images/tree-folder.gif</filename>
+            <filename>images/tree-leaf-end.gif</filename>
+            <filename>images/tree-leaf.gif</filename>
+            <filename>images/tree-node-end.gif</filename>
+            <filename>images/tree-node-open-end.gif</filename>
+            <filename>images/tree-node-open.gif</filename>
+            <filename>images/tree-node.gif</filename>
+            <filename>images/tree.gif</filename>
+            <filename>images/treemenu_dimensions.png</filename>
+            <filename>images/white-tab.png</filename>
+
+            <filename>js/AnchorPosition.js</filename>
+            <filename>js/ColorPicker2.js</filename>
+            <filename>js/DynamicTreeBuilder2.js</filename>
+            <filename>js/PopupWindow.js</filename>
+            <filename>js/actions2.js</filename>
+            <filename>js/dhtml.js</filename>
+            <filename>js/ie5.js</filename>
+            <filename>js/plugins2.js</filename>
+            <filename>js/swmenupro_packed.js</filename>
+            <filename>js/wz_tooltip.js</filename>
+            
+			<filename>language/french.php</filename>
+			<filename>language/catalan.php</filename>
+			<filename>language/dutch2.php</filename>
+			<filename>language/swedish.php</filename>
+			<filename>language/dutch.php</filename>
+			<filename>language/english.php</filename>
+			<filename>language/hebrew.php</filename>
+			<filename>language/germani.php</filename>
+			<filename>language/hrvatski.php</filename>
+			<filename>language/spanish.php</filename>
+			<filename>language/russian.php</filename>
+			<filename>language/hungarian_formal.php</filename>
+			<filename>language/hungarian_informal.php</filename>
+			<filename>language/default.ini</filename>
+			          
+
+
+		<filename>modules/mod_swmenupro/mod_swmenupro.php</filename>
+		<filename>modules/mod_swmenupro/mod_swmenupro.sw</filename>
+        <filename>modules/mod_swmenupro/ClickShowHideMenu.js</filename>
+        <filename>modules/mod_swmenupro/ClickShowHideMenu_Packed.js</filename>
+        <filename>modules/mod_swmenupro/DropDownMenuX.js</filename>
+        <filename>modules/mod_swmenupro/DropDownMenuX_Packed.js</filename>
+        <filename>modules/mod_swmenupro/cache/menu.cache</filename>
+		<filename>modules/mod_swmenupro/styles/menu.css</filename>
+        <filename>modules/mod_swmenupro/dtree.js</filename>
+        <filename>modules/mod_swmenupro/dtree_Packed.js</filename>
+        <filename>modules/mod_swmenupro/functions.php</filename>
+        <filename>modules/mod_swmenupro/ie5.js</filename>
+        <filename>modules/mod_swmenupro/ie5_Packed.js</filename>
+		<filename>modules/mod_swmenupro/moo.fx.js</filename>
+        <filename>modules/mod_swmenupro/moo.fx.pack.js</filename>
+		<filename>modules/mod_swmenupro/prototype.lite.js</filename>
+        <filename>modules/mod_swmenupro/images/empty.gif</filename>
+        <filename>modules/mod_swmenupro/images/no_image.gif</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/.grey-40.png</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/.white-90.png</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/grey-40.png</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/submenu-off.gif</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/submenu-on.gif</filename>
+		<filename>modules/mod_swmenupro/images/transmenu/submenuleft-off.gif</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/submenuleft-on.gif</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/white-90.png</filename>
+        <filename>modules/mod_swmenupro/images/transmenu/x.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/base.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/cd.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/doc.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/empty.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/folder-open.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/folder.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/folderopen.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/globe.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/imgfolder.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/join.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/joinbottom.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/line.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/minus.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/minusbottom.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/musicfolder.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/nolines_minus.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/nolines_plus.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/page.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/plus.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/plusbottom.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/question.gif</filename>
+        <filename>modules/mod_swmenupro/images/tree_icons/trash.gif</filename>
+        <filename>modules/mod_swmenupro/menu.js</filename>
+        <filename>modules/mod_swmenupro/menu_Packed.js</filename>
+        <filename>modules/mod_swmenupro/styles.php</filename>
+        <filename>modules/mod_swmenupro/transmenu.js</filename>
+        <filename>modules/mod_swmenupro/transmenu_Packed.js</filename>
+		<filename>modules/mod_swmenupro/ddtabmenu.js</filename>
+        </files>
+      
+
+       
+       
+    </administration>
+
+</install>

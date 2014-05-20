@@ -1,0 +1,34 @@
+.adminlist.magictoolbox { background-color:#ccc; }
+.adminlist.magictoolbox th,.adminlist.magictoolbox td  { font-size:12px; padding:8px 8px;}
+.adminlist.magictoolbox select, .adminlist.magictoolbox input { font-size:12px; padding:2px; }
+#search-query { font-size:12px; padding:2px; }
+adminlist.magictoolbox td input { font-size:12px; padding:2px; width:100%; }
+.adminlist.magictoolbox th.title { background:#eee; font-size:13px; white-space:Nowrap; padding:8px; vertical-align:top; }
+table.adminlist.magictoolbox tbody tr.row1 td,table.adminlist.magictoolbox tbody tr.row1 th { background:#fff; }
+table.adminlist.magictoolbox tbody tr.row0 td,table.adminlist.magictoolbox tbody tr.row0 th { background:#eee; }
+table.adminlist.magictoolbox tbody tr.row0 td.def_changed,  table.adminlist.magictoolbox tbody tr.row1 td.def_changed { color:#000; font-weight:bold; }
+table.adminlist.magictoolbox tbody tr td { border:none; color:#999; }
+.adminlist.magictoolbox  th.subtitle { font-weight:bold; font-size:16px; background:#dfdfdf; padding:8px; }
+.adminlist.magictoolbox tbody th { color:#444; }
+.adminlist.magictoolbox tbody th span { display:block; font-weight:Normal; color:#666666; margin:4px 0; }
+.adminlist.magictoolbox th.title.def, table.adminlist.magictoolbox tbody tr.row0 td.def,  table.adminlist.magictoolbox tbody tr.row1 td.def { font-weight:bold; background:#f4efa3; color:#666; }
+
+.adminlist.magictoolbox span.yes { text-indent:-5000px; background:url({IMAGEURL}/yes.gif); display:block; width:16px; height:16px; margin:0 auto; opacity:0.5; -moz-opacity:0.5; -html-opacity:0.5; filter:alpha(Opacity=50);}
+.adminlist.magictoolbox span.no { text-indent:-5000px; background:url({IMAGEURL}/no.gif); display:block; width:16px; height:16px; margin:0 auto; opacity:0.5; -moz-opacity:0.5; -html-opacity:0.5; filter:alpha(Opacity=50);}
+table.adminlist.magictoolbox tbody td.def span.yes, table.adminlist.magictoolbox tbody td.def span.no, table.adminlist.magictoolbox tbody td.def_changed span.yes, table.adminlist.magictoolbox tbody td.def_changed span.no { opacity:1; -moz-opacity:1; -html-opacity:1; filter:alpha(Opacity=100); } 
+
+.adminlist.magictoolbox a.settings { background:url({IMAGEURL}/settings.gif) left center no-repeat; display:block; line-height:16px; margin:6px 0 0 0; padding:0 0 0 20px; text-decoration:underline; font-size:12px; }
+
+h3.magictoolbox  { font-weight:bold; font-size:16px; background:#dfdfdf; padding:8px; }
+h3.magictoolbox  span { display:block; clear:both; line-height:0px; font-size:0px; height:0px; }
+.magictoolbox .mBtn { border: 1px solid #86AB15; background:#9dc91a; font-size:13px; color:#fff; padding:6px 9px; font-weight:bold; cursor:pointer; }
+
+
+.adminlist.magictoolbox input, .adminlist.magictoolbox select { font-size:12px; }
+.adminlist.magictoolbox img { position:relative; top:2px; }
+.adminlist.magictoolbox th { text-align:left; vertical-align:middle; }
+.adminlist.magictoolbox label, .adminlist.magictoolbox input { color:#444444; }
+.adminlist.magictoolbox .mBtn { color:#fff; }
+
+.adminlist.magictoolbox .mzr { border:none; }
+.adminlist.magictoolbox .mzinp { padding:3px; }

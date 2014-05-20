@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------
+ # Ytc Content Simple Tabs  - Version 1.0
+ # ------------------------------------------------------------------------
+ # Copyright (C) 2009-2010 The YouTech Company. All Rights Reserved.
+ # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ # Author: The YouTech Company
+ # Websites: http://addon.ytcvn.com
+ -------------------------------------------------------------------------*/
+ 
+ /*theme1*/
+ .yt-k2tab .theme1 .tabs {float: left; width: 85%}
+ .yt-k2tab .theme1 .box-wrapper {margin-left: 38px; width: 85%; float: left; margin-top: -5px}
+
+/*theme2*/
+.yt-k2tab .theme2 .tabs {float: left; width: 85%;} 
+.yt-k2tab .theme1 .box-wrapper {width: 85%}
+ 
+ /*theme3*/
