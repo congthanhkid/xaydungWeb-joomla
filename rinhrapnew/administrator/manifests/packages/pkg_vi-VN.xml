@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+<name>Vietnamese Language Pack</name>
+<packagename>vi-VN</packagename> 
+<version>2.5.8.1</version> 
+<creationDate>November 2012</creationDate> 
+<author>Vietnamese Translation Team</author> 
+<authorEmail>info@joomlaviet.info</authorEmail> 
+<authorUrl>http://joomlaviet.info</authorUrl> 
+<description>2.5.8.1 Joomla Vietnamese Language Package</description>
+<files>
+	<file type="language" client="site" id="vi-VN">site_vi-VN.zip</file>
+	<file type="language" client="administrator" id="vi-VN">admin_vi-VN.zip</file>
+</files>
+	 <updateservers>
+		<server type="collection" priority="1" name="Accredited Joomla! Translations">http://update.joomla.org/language/translationlist.xml</server>
+	</updateservers>
+</extension>
