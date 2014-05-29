@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>System - JV Counter</name>
+    <author>Open Source Code Solutions Co</author>
+    <creationDate>November 2012</creationDate>
+    <copyright>Copyright © 2008-2012 joomlavi.com. All Rights Reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL or later.</license>
+    <authorEmail>info@joomlavi.com</authorEmail>
+    <authorUrl>http://www.joomlavi.com</authorUrl>
+    <version>3.0.1</version>
+    <description>Plugin JV Counter 3.0.1</description>
+	<scriptfile>script.php</scriptfile>
+    <files>
+        <filename plugin="jvcounter">jvcounter.php</filename>
+		<filename plugin="jvcounter">index.html</filename>
+        <folder   plugin="jvcounter">jvcounter</folder>
+		<filename>script.php</filename>
+    </files>
+    <install>
+		<sql>
+			<file charset="utf8" driver="mysql">jvcounter/install.sql</file>
+		</sql>
+    	
+    </install>
+    <uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">jvcounter/uninstall.sql</file>
+		</sql>
+    	
+    </uninstall>
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+ 
+</extension>

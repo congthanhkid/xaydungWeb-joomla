@@ -1,0 +1,17 @@
+.jvcounter_contain { background: #ffffff url(images/bg-bottom.png) repeat-x 0 100%; border: 1px solid #cccccc; font-family: Arial, Helvetica, sans-serif; color: #00b3f6; font-size: 14px; 
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.31);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.31);
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.31); }
+
+.jvcounter_headertext { background: url(images/bg-header.png) no-repeat scroll 15px 50%; color: #00b3f6; font-size: 18px; font-family: Georgia, "Times New Roman", Times, serif; padding: 8px 0px 8px 25px; margin-bottom: 15px; border-bottom: 1px dashed #cacaca; }
+
+.digitstype { margin-bottom: 20px; text-align: center;}
+
+.counterday { padding:0 15px; text-align: right;}
+
+.jvcounter_alldays { margin-bottom: 15px;}
+
+.counteronline { border-top: 1px dashed #cacaca; padding: 15px 15px 0;  margin: 0 0px 50px; text-align: right;}
+
+.counterday span, .counteronline span { color: #222222; float: left; text-align: left;}
+

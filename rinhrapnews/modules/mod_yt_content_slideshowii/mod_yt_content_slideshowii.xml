@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7.0"
+	client="site"
+	method="upgrade">
+    <name>Yt Content Slide Show II</name>
+	<author>YouTech Company</author>
+	<creationDate>Jan 2011</creationDate>
+    <copyright>(C) 2010 YouTech Company</copyright>
+	<license>GNU General Public License version 2 or later; see
+		LICENSE.txt</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.ytcvn.com</authorUrl>
+	<version>1.6.0</version>
+	<description><![CDATA[<a href="http://joomlana.net" target="_blank"><img src="http://joomlana.net/Joomlana%20Enterprise.png" width="360" height="115" alt="Joomlana.net" /></a><br/>]]> YT_EXTENSIONS_DESC</description>
+    <files>
+         <filename module="mod_yt_content_slideshowii">mod_yt_content_slideshowii.php</filename>
+         <filename module="mod_yt_content_slideshowii">mod_yt_content_slideshowii.xml</filename>
+         <filename module="mod_yt_content_slideshowii">helper.php</filename>         
+         <folder module="mod_yt_content_slideshowii">assets</folder>
+         <folder module="mod_yt_content_slideshowii">tmpl</folder>
+         <folder module="mod_yt_content_slideshowii">elements</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yt_content_slideshowii.ini</language>
+	</languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTICLES_CATEGORY" />
+    <config>
+	<fields name="params">
+		<fieldset name="general_settings" label="MOD_CONTENT_SLIDERSHOWII_FIELD_GROUP1_GENERAL_SETTING_LABEL" addfieldpath="/modules/mod_yt_content_slideshowii/elements">
+        <!-- Group 1: Article Filter -->
+            <field name="moduleclass_sfx" type="text"
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+              
+            
+            <field 
+                name="sec_cat_list" 
+                type="content" 
+                multiple="true" size="8"
+               	label="JCATEGORY"
+				description="MOD_ARTICLES_CATEGORY_FIELD_CATEGORY_DESC"
+                disabled="false" 
+                readonly="false" 
+                >
+				</field> 
+            
+            <field
+				name="frontpage"
+				type="list"
+				default="2"
+				label="MOD_CONTENT_SLIDERSHOWII_FRONTPAGE_ARTICLE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_FRONTPAGE_ARTICLE_DESC">
+				<option
+					value="0">Hide frontpage articles</option>
+				<option
+					 value="1">Show frontpage articles only</option>
+                <option
+					 value="2">Include frontpage articles</option>
+			</field>
+            
+            <field
+				name="sort_order_field"
+				type="list"
+				default="created"
+				label="MOD_CONTENT_SLIDERSHOWII_SORT_ORDER_BY_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SORT_ORDER_BY_DESC">
+				<option
+					value="created">Recently Added First</option>
+				<option
+					 value="modified">Recently Modified First</option>
+                <option
+					 value="ordering">Ordering</option>
+                <option
+					 value="title">Title</option>
+                <option
+					 value="random">Random</option>
+			</field>
+            <field name="width_module_slide_ii" type="text" default="880"
+				label="MOD_CONTENT_SLIDERSHOWII_WIDTH_MODULE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_WIDTH_MODULE_DESC" />
+            <field name="total" type="text" default="15"
+				label="MOD_CONTENT_SLIDERSHOWII_AMOUNT_ARTICLE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_AMOUNT_ARTICLE_DESC" />
+            <field name="num_item_per_page" type="text" default="4"
+				label="MOD_CONTENT_SLIDERSHOWII_NUMBER_PER_PAGE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_NUMBER_PER_PAGE_DESC" />
+            <field
+				name="auto_play"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_AUTO_PLAY_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_AUTO_PLAY_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+        <!-- End Group 1: Article Filter -->
+        </fieldset>
+        <fieldset name="title_link" label="MOD_CONTENT_SLIDERSHOWII_FIELD_GROUP2_TITLE_LINK_LABEL">     
+		<!-- Group 2: For title and link -->
+			<field name="limittitle" type="text" default="25"
+				label="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_TITLE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_TITLE_DESC" />
+            <field
+				name="target"
+				type="list"
+				default="_self"
+				label="MOD_CONTENT_SLIDERSHOWII_OPEN_LINK_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_OPEN_LINK_DESC">
+				<option
+					value="_blank">New Window</option>
+				<option
+					 value="_self">Same Window</option>
+			</field>
+            <field
+				name="show_caption_slide"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_SHOW_MAIN_DESCRIPTION_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SHOW_MAIN_DESCRIPTION_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+            <field
+				name="link_image"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_LINK_IMAGE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_LINK_IMAGE_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+            <field
+				name="show_normal_description"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_SHOW_NORMAL_DESCRIPTION_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SHOW_NORMAL_DESCRIPTION_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+            <field
+				name="show_title_slideshowii"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_SHOW_NORMAL_TITLE_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SHOW_NORMAL_TITLE_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+            <field
+				name="show_readmore_slideii"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_SHOW_READMORE_TEXT_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_READMORE_TEXT_DESC">
+				<option
+					value="1">Yes</option>
+				<option
+					 value="0">No</option>
+			</field>
+            <field
+				name="show_buttons_slideii"
+				type="list"
+				default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_SHOW_BUTTONS_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SHOW_BUTTONS_DESC">
+				<option
+					value="1">Display</option>
+				<option
+					 value="2">Hover</option>
+                <option
+					 value="0">Hide</option>
+			</field>
+            <field name="readmore_sliderii" type="text" default="Readmore"
+				label="MOD_CONTENT_SLIDERSHOWII_READMORE_TEXT_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_READMORE_TEXT_DESC" />
+            <field name="limit_normal_description" type="text" default="120"
+				label="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_NORMAL_DESCRIPTION_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_NORMAL_DESCRIPTION_DESC" />
+            <field name="limit_main_description" type="text" default="250"
+				label="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_MAIN_DESCRIPTION_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_MAX_LENGTH_MAIN_DESCRIPTION_DESC" />
+            <field name="customUrl" type="textarea" default="" cols="35" rows="5"
+				label="MOD_CONTENT_SLIDERSHOWII_CUSTOM_URL_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_CUSTOM_URL_DESC" />
+		<!-- End Group 2: For title and link -->
+        </fieldset>
+        <fieldset name="images_option" label="MOD_CONTENT_SLIDERSHOWII_FIELD_GROUP3_IMAGE_OPTION_LABEL">
+        <!-- Group 3: For Images -->
+            <field
+    			name="show_main_image"
+    			type="list"
+    			default="1"
+    			label="MOD_CONTENT_SLIDERSHOWII_SHOW_MAIN_IMAGE_LABEL"
+    			description="MOD_CONTENT_SLIDERSHOWII_MAIN_IMAGE_DESC">
+    			<option
+    				value="1">Yes</option>
+    			<option
+    				 value="0">No</option>
+    		</field>
+            <field
+    			name="show_normal_image"
+    			type="list"
+    			default="1"
+    			label="MOD_CONTENT_SLIDERSHOWII_SHOW_NORMAL_IMAGE_LABEL"
+    			description="MOD_CONTENT_SLIDERSHOWII_NORMAL_IMAGE_DESC">
+    			<option
+    				value="1">Yes</option>
+    			<option
+    				 value="0">No</option>
+    		</field>
+            <field name="thumb_width" type="text" default="570"
+    				label="MOD_CONTENT_SLIDERSHOWII_THUMBNAIL_WIDTH_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_THUMBNAIL_WIDTH_DESC" />
+            <field name="thumb_height" type="text" default="350"
+    				label="MOD_CONTENT_SLIDERSHOWII_THUMBNAIL_HEIGHT_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_THUMBNAIL_HEIGHT_DESC" />
+            <field name="small_thumb_width" type="text" default="70"
+    				label="MOD_CONTENT_SLIDERSHOWII_SMALL_THUMBNAIL_WIDTH_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_SMALL_THUMBNAIL_WIDTH_DESC" />
+            <field name="small_thumb_height" type="text" default="55"
+    				label="MOD_CONTENT_SLIDERSHOWII_SMALL_THUMBNAIL_HEIGHT_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_SMALL_THUMBNAIL_HEIGHTH_DESC" />    
+            <field
+    			name="imagesource"
+    			type="list"
+    			default="0"
+    			label="MOD_CONTENT_SLIDERSHOWII_IMAGE_SOURCE_LABEL"
+    			description="MOD_CONTENT_SLIDERSHOWII_IMAGE_SOURCE_DESC">
+    			<option
+    				value="1">Yes</option>
+    			<option
+    				 value="0">No</option>
+    		</field>
+            <field
+    			name="cropresizeimage"
+    			type="list"
+    			default="1"
+    			label="MOD_CONTENT_SLIDERSHOWII_SHOW_THUMBNAIL_MODE_TYPE_LABEL"
+    			description="MOD_CONTENT_SLIDERSHOWII_THUMBNAIL_MODE_TYPE_DESC">
+    			<option
+    				value="0">Using Resize</option>
+    			<option
+    				 value="1">Using Crop</option>
+    		</field>
+        <!-- End Group 3: For Images -->
+        </fieldset>
+        <fieldset name="theme_effect" label="MOD_CONTENT_SLIDERSHOWII_FIELD_GROUP4_THEME_EFFECT_LABEL">
+        <!-- Group 4: Themes and layouts -->   
+           
+            <field name="theme" type="list"
+				label="MOD_CONTENT_SLIDERSHOWII_SELECT_THEME_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SELECT_THEME_DESC"
+				default="theme1"
+			>
+				<option value="theme1">Theme 1</option>
+    			<option value="theme2">Theme 2</option>
+                <option value="theme3">Theme 3</option>
+    			<option value="theme4">Theme 4</option>
+                <option value="theme5">Theme 5</option>
+				
+		    </field>
+            
+            <field name="effect" type="list"
+				label="MOD_CONTENT_SLIDERSHOWII_SELECT_EFFECT_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_SELECT_EFFECT_DESC"
+				default="all"
+			>
+				<option value="fade">Fade</option>
+    			<option value="fadeZoom">Fade Zoom</option>
+    			<option value="zoom">Zoom</option>
+    			<option value="shuffle">Shuffle</option>
+    			<option value="toss">Toss</option>
+    			<option value="wipe">Wipe</option>
+    			<option value="cover">Cover</option>
+    			<option value="uncover">Uncover</option>
+    			<option value="blindX">Blind X</option>
+    			<option value="blindY">Blind Y</option>
+    			<option value="blindZ">Blind Z</option>
+    			<option value="growY">Grow Y</option>
+    			<option value="curtainX">Curtain X</option>
+    			<option value="curtainY">Curtain Y</option>
+    			<option value="slideX">Slide X</option>
+    			<option value="slideY">Slide Y</option>
+    			<option value="turnUp">Turn Up</option>
+    			<option value="turnDown">Turn Down</option>
+    			<option value="turnLeft">Turn Left</option>
+    			<option value="turnRight">Turn Right</option>
+    			<option value="scrollRight">Scroll Right</option>
+    			<option value="scrollLeft">Scroll Left</option>
+    			<option value="scrollUp">Scroll Up</option>
+    			<option value="scrollDown">Scroll Down</option>
+    			<option value="all">Random</option>
+				
+		    </field>
+            <field name="play" type="list"
+				label="MOD_CONTENT_SLIDERSHOWII_HOVER_STOP_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_HOVER_STOP_DESC"
+				default="1"
+			>
+				<option value="1">Yes</option>
+                <option value="0">No</option>
+		    </field>
+            <field name="slideshow_speed" type="text" default="800"
+    				label="MOD_CONTENT_SLIDERSHOWII_SLIDESHOW_SPEED_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_SLIDESHOW_SPEED_DESC" />
+            <field name="timer_speed" type="text" default="3000"
+    				label="MOD_CONTENT_SLIDERSHOWII_TIMER_SPEED_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_TIMER_SPEED_DESC" />
+            
+            <field name="normal_description_color" type="text" default="#545454"
+    				label="MOD_CONTENT_SLIDERSHOWII_NORMAL_DESCRIPTION_COLOR_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_NORMAL_DESCRIPTION_COLOR_DESC" />
+            <field name="normal_description_active_color" type="text" default="#FFFFFF"
+    				label="MOD_CONTENT_SLIDERSHOWII_NORMAL_DESCRIPTION_ACTIVE_COLOR_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_NORMAL_DESCRIPTION_ACTIVE_COLOR_DESC" />
+            <field name="opacity_main" type="text" default="0.7"
+    				label="MOD_CONTENT_SLIDERSHOWII_BACKGROUND_OPACITY_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_BACKGROUND_OPACITY_DESC" />
+            <field name="normal_background" type="text" default="#FFFFFF"
+    				label="MOD_CONTENT_SLIDERSHOWII_NORMAL_BACKGROUND_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_NORMAL_BACKGROUND_DESC" />
+            <field name="normal_active_background" type="text" default="#2c0da0"
+    				label="MOD_CONTENT_SLIDERSHOWII_NORMAL_ACTIVE_BACKGROUND_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_NORMAL_ACTIVE_BACKGROUND_DESC" />
+            <field name="title_color" type="text" default="#545454"
+    				label="MOD_CONTENT_SLIDERSHOWII_TITLE_COLOR_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_TITLE_COLOR_DESC" />
+            <field name="title_active_color" type="text" default="#FFFFFF"
+    				label="MOD_CONTENT_SLIDERSHOWII_TITLE_ACTIVE_COLOR_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_TITLE_ACTIVE_COLOR_DESC" />
+            <field name="intro" type="textarea" cols="35" rows="5" default=""
+    				label="MOD_CONTENT_SLIDERSHOWII_INTRO_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_INTROD_DESC" filter="safehtml"/>
+            <field name="note" type="textarea" cols="35" rows="5" default=""
+    				label="MOD_CONTENT_SLIDERSHOWII_FOOTER_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_FOOTER_DESC" filter="safehtml"/>
+        <!-- End Group 4: Themes and layouts -->		
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="cache" type="list" default="0"
+				label="MOD_CONTENT_SLIDERSHOWII_CACHING_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_CACHING_DESC"
+			>
+				<option value="1">Use Cache</option>
+				<option value="0">Do not use Cache</option>
+			</field>
+            <field name="jquery" type="radio" default="1"
+				label="MOD_CONTENT_SLIDERSHOWII_INCLUDE_JQUERY_LIBRARY_LABEL"
+				description="MOD_CONTENT_SLIDERSHOWII_INCLUDE_JQUERY_LIBRARY_DESC"
+			>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+            <field name="cache_time" type="text" default="900"
+    				label="MOD_CONTENT_SLIDERSHOWII_CACHE_TIME_LABEL"
+    				description="MOD_CONTENT_SLIDERSHOWII_CACHE_TIME_DESC"/>	
+		</fieldset>
+	</fields>
+	</config>
+</extension>
