@@ -1,2 +1,0 @@
-Date	Time	Cause	IP	Name	User agent	Request method	Request URI	Comment
-2014-05-22	09:18:14	Flooding	::1	thanhnhu86	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0	GET	/rinhrapnew/index.php?jat3action=gzip&jat3type=css&jat3file=t3-assets%2Fcss_eda50.css	10 requests in less than 10 seconds (max = 10)
